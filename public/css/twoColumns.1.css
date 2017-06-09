@@ -1,13 +1,11 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 html, body {
-    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    background: #f3f3f3;
     overflow: hidden;
-}
-
-.wrap {
-  height: 100vh;
-  display: flex;
 }
 
 p {
@@ -40,10 +38,10 @@ nav {
 
 main {
     
-    flex-grow: 1;  /* ensures that the container will take up the full height of the parent container */
-    overflow-y: auto;  /* adds scroll to this container */
+    flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
+    overflow-y: auto;  /*adds scroll to this container*/
+    padding: 15px;
     background: #f3f3f3;
-    padding: 2em;
 }
 
 .navbar {
@@ -205,4 +203,5 @@ nav-footer {
     align-items: flex-end; 
 	justify-content: flex-end; 
     padding: 10px;
+    height: 150px;
 }
