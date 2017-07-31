@@ -1,11 +1,10 @@
 .table {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     font-size: .8rem;
     margin: 0.5rem;
     line-height: 1.5;
-    border-bottom: 1px solid #d0d0d0;
-    flex: 1 1 auto;
+    border-bottom: 1px solid red; // flex: 1 1 auto;
 }
 
 .th {
@@ -14,7 +13,7 @@
     background-color: #f2f2f2;
 }
 
-.th > .td {
+.th>.td {
     white-space: normal;
     justify-content: center;
 }
@@ -45,4 +44,62 @@
     min-width: 0px;
     white-space: nowrap;
     border-bottom: 1px solid #d0d0d0;
+}
+
+// box
+// flex container
+.box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: stretch;
+    background-color: #b3b3b3;
+    margin: 5px;
+    border: 2px solid rebeccapurple;
+    height: 100%;
+    div.box-item {
+        order: 1;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: stretch;
+        min-width: 0;
+        min-height: auto;
+        margin: 5px;
+    }
+    div.invoice-items-box:nth-of-type(even) {
+        background-color: #f2f2f2;
+    }
+    div.invoice-items-box:nth-of-type(odd) {
+        background-color: #ffffff;
+    }
+}
+
+.invoice-items-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    align-items: center;
+    padding: 5px;
+    div {
+        order: 1;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: center;
+        min-width: 0;
+        min-height: auto;
+        margin: 10px;
+    }
+}
+
+// phone
+@media (max-width: 661px) {
+    .invoice-items-box {
+        flex-direction: column;
+    }
 }
